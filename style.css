@@ -1,0 +1,178 @@
+/*
+Theme Name: The French Monkey
+Author: Paul Perrier
+Author URI: http://thefrenchmonkey.madnarts.com
+Description: TFM style wordpress theme
+*/
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #FFF;
+}
+
+/*
+**
+CONTAINERS STYLES
+**
+*/
+
+.container {
+  background-color: #000;
+  width:100vw;
+  height: 2000px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.intro_container {
+  background-color: #1A1A1A;
+  width:100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_container {
+  width: 70%;
+  height: 500px;
+  background-color: #111;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+/*
+**
+HEADER STYLE SET
+**
+*/
+
+#header {
+  top: 0;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+
+}
+
+.header-menu {
+  width: 80%;
+  text-decoration: none;
+}
+
+.header-menu ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+
+/*
+**
+FONTS & TEXTS
+**
+*/
+
+
+.card {
+  width: 100%;
+  height: 400px;
+  background-color: #1A1A1A;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-left: 15px;
+  text-align: left;
+  color: #FFF;
+}
+
+.card_age {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-left: 15px;
+  text-align: left;
+  color: #FFF;
+}
+
+
+
+/*ZONE OF CONTENT*/
+
+.single_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+/* SINGLE PROFILE CONTENTT*/
+
+.upper_section {
+  margin-top: 65px;
+  width: 100%;
+  height: 250px;
+  background-color: #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single_img {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+}
+
+.single_name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* FOOTER */
+
+#footer {
+  background-color: #1A1A1A;
+  width:100vw;
+  height:200px;
+}
