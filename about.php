@@ -9,8 +9,6 @@ Template Name: About
 
     <div id="content" class="container">
 
-
-
         <div class="intro_container">
 
             <h1>About</h1>

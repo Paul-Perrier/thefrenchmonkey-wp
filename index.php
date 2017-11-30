@@ -7,7 +7,21 @@
 
         <div class="intro_container">
 
-            <h1>Ma bite</h1>
+           <div class="showcase-render-container">
+               <div class="render-picture">
+                   <div class="img"></div>
+                   <h3>Daily Render</h3>
+               </div>
+               <div class="right-information">
+
+                   <div class="render-title"><span>Date</span><span>Title</span></div>
+                   <div class="render-software"><span>Software</span></div>
+                   <div class="render-engine"><span>Renderer</span></div>
+                   <div class="render-dowload">download</div>
+                   <div class="render-files">Project Render File</div>
+
+               </div>
+           </div>
 
         </div>
 
