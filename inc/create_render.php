@@ -66,6 +66,15 @@ function render_function(){
         );
         register_taxonomy( $taxonomy, $object_type, $args );
 
+        $taxonomy="month";
+        $object_type = array("render");
+        $args = array(
+            'label' => __( 'Month' ),
+            'rewrite' => array( 'slug' => 'month' ),
+            'hierarchical' => true,
+        );
+        register_taxonomy( $taxonomy, $object_type, $args );
+
 }
 
 add_action('init', 'render_function');

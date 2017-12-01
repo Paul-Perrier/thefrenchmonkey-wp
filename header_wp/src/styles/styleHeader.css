@@ -1,0 +1,117 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+header
+{
+  width: 100%;
+  height: 14vh;
+  background-color: #201a16;
+  display: flex;
+}
+
+div.header-body
+{
+  width: 100%;
+  height: 100%;
+}
+
+div.header-body ul
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+div.header-body li
+{
+  list-style: none;
+  padding-right: 3vw;
+  text-align: center;
+  color: white;
+}
+
+div.header-body a
+{
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+
+div.container-logo
+{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  background-image: url('../img/logo.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+/******************
+
+Animation CSS
+
+******************/
+
+div.header-body a:hover
+{
+  color: #e06900;
+}
+
+/******************
+
+Footer
+
+******************/
+
+footer
+{
+  width: 100%;
+  height: 14vh;
+  background-color: #201a16;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.container-footer ul
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+div.container-footer li
+{
+  list-style: none;
+  padding-right: 2vw;
+  color: white;
+}
+
+div.container-footer li img
+{
+  height: 25px;
+  width: 25px;
+}
+
+div.copy-right
+{
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+div.copy-right p
+{
+  color: grey;
+}

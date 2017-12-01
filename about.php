@@ -9,17 +9,12 @@ Template Name: About
 
     <div id="content" class="container">
 
-        <div class="intro_container">
 
-            <h1>About</h1>
-
-        </div>
-
-        <div class="card_container">
+        <div class="about-container">
 
             <?php
 
-            $args = array('post_type' => 'render');
+            $args = array('post_type' => 'about');
 
             // The Query
             $the_query = new WP_Query( $args );
@@ -29,15 +24,33 @@ Template Name: About
                 while ( $the_query->have_posts() ) {
                     $the_query->the_post();
                     ?>
-                    <!-- card -->
-                    <div class="card">
-
-                        <?php $url = wp_get_attachment_url( get_field('image') ); ?>
-                        <img class="card_img" width="250px" height="250px" src="<?php echo $url ?>" alt="">
-
-                        <a class="card_title" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo the_title(); ?></a>
-                        <span class="card_age"><?php the_field('date'); ?></span>
-
+                        <div class="about-titles">
+                            <div class="about-title-top">
+                                <h1><?php the_field('tfm_title'); ?></h1>
+                            </div>
+                            <div class="about-title-bot">
+                                <h3></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <div class="who-i-am">
+                            <p>
+                                <?php the_field('paragraph1'); ?>
+                            </p>
+                        </div>
+                        <div class="the-site">
+                            <h4><?php the_field('title2'); ?></h4>
+                            <p>
+                                <?php the_field('paragraph2'); ?>
+                            </p>
+                        </div>
+                        <div class="tfm-style">
+                            <h4><?php the_field('title3'); ?></h4>
+                            <p>
+                                <?php the_field('paragraph3'); ?>
+                            </p>
+                        </div>
                     </div>
 
                     <!-- end-card -->

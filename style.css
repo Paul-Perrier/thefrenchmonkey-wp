@@ -20,6 +20,17 @@ h1 {
   font-weight: 700;
 }
 
+h5 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+  margin-left: 120px;
+  margin-bottom: 40px;
+  color: #4F4F4F;
+}
+
 a {
   text-decoration: none;
 }
@@ -28,8 +39,62 @@ a {
 p {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  color: #FFF;
 }
+
+/*
+**
+HEADER STYLE SET
+**
+*/
+
+header
+{
+  width: 100%;
+  height: 14vh;
+  background-color: #1A1A1A;
+  display: flex;
+}
+
+div.menu-main-container ul
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu_header li
+{
+  list-style: none;
+  padding-right: 3vw;
+  text-align: center;
+  color: white;
+}
+
+.menu_header li a
+{
+  font-family: Montserrat;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: 0.5s;
+}
+
+.container-logo
+{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  background-image: url('./assets/images/logo.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
 
 /*
 **
@@ -163,35 +228,6 @@ CONTAINERS STYLES
   margin-bottom: 40px;
   color: #4F4F4F;
 }
-/*
-**
-HEADER STYLE SET
-**
-*/
-
-#header {
-  top: 0;
-  height: 100px;
-  width: 100%;
-  position: fixed;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0px;
-
-}
-
-.header-menu {
-  width: 80%;
-  text-decoration: none;
-}
-
-.header-menu ul {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
 
 
 /*
@@ -244,40 +280,45 @@ ANIMATIONS SECTION
 
 /*
 **
-FONTS & TEXTS
+CARDS
 **
 */
 
+.card-container {
+  width:70%;
+  height: auto;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+
 
 .card {
-  width: 100%;
+  width: 260px;
   height: 400px;
-  background-color: #1A1A1A;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
 
-.card_title {
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  margin-top: 15px;
-  margin-left: 15px;
-  text-align: left;
-  color: #FFF;
-}
-
-.card_age {
+.card-title {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 500;
   margin-top: 15px;
-  margin-left: 15px;
   text-align: left;
-  color: #FFF;
 }
 
+.card-image {
+  width: 260px;
+  height: auto;
+}
+
+.card-image img {
+  width: 260px;
+  height: auto;
+}
 
 
 /*ZONE OF CONTENT*/
@@ -288,6 +329,97 @@ FONTS & TEXTS
   justify-content: center;
   flex-direction: column;
 }
+
+/*
+BUNDLES
+ */
+
+.showcase-bundle-container
+{
+  width: 70%;
+  height: 400px;
+  /*background-color:red;*/
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+}
+
+.bundle-picture img
+{
+  width: 297px;
+  height: 297px;
+}
+
+/****************************** RIGHT INFORMATION ******************************/
+
+.bundle-right-information
+{
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bundle-title
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 29px;
+}
+
+.bundle-description
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 1em;
+  color: black;
+}
+
+.bundle-include-title
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 0.5em;
+}
+
+.bundle-include-list
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.bundle-price
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  display: flex;
+  margin-top: 1em;
+}
+
+.bundle-call-to-action
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  align-self: center;
+  margin-left: 2em;
+}
+
+.bundle-call-to-action span
+{
+  border: 1px black solid;
+  height: 1.8em;
+  width: 12em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2em;
+}
+
+
 
 
 /* SINGLE PROFILE CONTENTT*/
@@ -315,10 +447,148 @@ FONTS & TEXTS
   font-weight: 700;
 }
 
-/* FOOTER */
+/******************
 
-#footer {
-  background-color: #1A1A1A;
-  width:100vw;
-  height:200px;
+Footer
+
+******************/
+
+footer
+{
+  width: 100%;
+  height: 250px;
+  background-color: #201a16;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.container-footer ul
+{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+div.container-footer li
+{
+  list-style: none;
+  padding-right: 2vw;
+  color: white;
+}
+
+div.container-footer li img
+{
+  height: 25px;
+  width: 25px;
+}
+
+div.copy-right
+{
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+div.copy-right p
+{
+  color: grey;
+}
+
+/********
+
+ABOUT
+
+ */
+
+div.about-container
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+div.about-titles
+{
+  width: 85vw;
+  height: 85vh;
+  background-image: url('./assets/images/tfm.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+div.about-title-top
+{
+  width: 100%;
+  margin: 22vh 0;
+
+}
+
+div.about-title-top h1
+{
+  font-size: 10rem;
+  opacity: 0.2;
+  margin-top: 500px;
+}
+
+div.about-title-bot h3
+{
+  font-size: 8rem;
+
+}
+
+/*
+
+Content
+
+*/
+
+.about-content
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  justify-content: center;
+
+}
+
+.about-content h4
+{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 111px;
+  font-size: 64px;
+  text-align: center;
+
+}
+
+.who-i-am p
+{
+  padding:0 31vw 8vh 31vw;
+  font-size: 1.3rem;
+}
+
+.about-content h4
+{
+  font-size: 3rem;
+  padding:0 31vw;
+  text-align: center;
+}
+
+.about-content p
+{
+  font-size: 1.3rem;
+  width:40%;
+  padding:0 31vw 8vh 31vw;
 }

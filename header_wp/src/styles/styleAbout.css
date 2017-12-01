@@ -1,0 +1,80 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+div.about-container
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+div.about-titles
+{
+  width: 85vw;
+  height: 85vh;
+  background-image: url('../img/tfm.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+div.about-title-top
+{
+  width: 100%;
+  margin: 22vh 0;
+}
+
+div.about-title-top h1
+{
+  font-size: 10rem;
+  opacity: 0.2;
+  
+}
+
+div.about-title-bot h3
+{
+  font-size: 8rem;
+}
+
+/*
+
+Content
+
+*/
+
+div.about-content
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+
+div.who-i-am p 
+{
+ padding:0 31vw 8vh 31vw;
+ font-size: 1.3rem;
+}
+
+h4
+{
+  font-size: 3rem;
+  padding:0 31vw;
+}
+
+p
+{
+  font-size: 1.3rem;
+  padding:1vh 31vw 8vh 31vw;
+}

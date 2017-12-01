@@ -9,19 +9,11 @@ Template Name: Bundles
 
     <div id="content" class="container">
 
-
-
-        <div class="intro_container">
-
-            <h1>Bundles</h1>
-
-        </div>
-
         <div class="card_container">
 
             <?php
 
-            $args = array('post_type' => 'render');
+            $args = array('post_type' => 'bundles');
 
             // The Query
             $the_query = new WP_Query( $args );
@@ -32,14 +24,41 @@ Template Name: Bundles
                     $the_query->the_post();
                     ?>
                     <!-- card -->
-                    <div class="card">
+                    <div class="showcase-bundle-container">
 
-                        <?php $url = wp_get_attachment_url( get_field('image') ); ?>
-                        <img class="card_img" width="250px" height="250px" src="<?php echo $url ?>" alt="">
+                        <div class="bundle-picture">
+                            <?php $url = wp_get_attachment_url( get_field('picture') ); ?>
+                            <img src="<?php echo $url ?>" alt="">
+                        </div>
 
-                        <a class="card_title" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo the_title(); ?></a>
-                        <span class="card_age"><?php the_field('date'); ?></span>
+                        <div class="bundle-right-information">
+                            <div class="bundle-title">
+                                <span><?php the_field('title') ?></span>
+                            </div>
+                            <div class="bundle-description">
+                                <p><?php the_field('description') ?></p>
+                            </div>
+                            <div class="bundle-include-title">
+                                <span><?php the_field('includes') ?></span>
+                            </div>
+                            <div class="bundle-include-list">
+                                <span>
+                                    <?php
 
+                                    $terms = get_the_terms(get_the_id(), 'bundle-content');
+                                    if ( $terms) {
+                                        foreach ( $terms as $term ) {
+                                            echo '<li>' . $term->name . '</li>';
+                                        }
+                                    }
+
+                                    ?>
+                                </span>
+                            </div>
+                            <div class="bundle-price">
+                                <span><?php the_field('price') ?></span>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- end-card -->

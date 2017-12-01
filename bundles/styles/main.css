@@ -1,0 +1,115 @@
+html, body
+{
+  height: 100%;
+  width: 100%;
+}
+
+.container
+{
+  width: 100%;
+  /*background-color: pink;*/
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.showcase-bundle-container
+{
+  width: 70%;
+  /*background-color:red;*/
+  display: flex;
+}
+
+.bundle-picture img
+{
+  width: 297px;
+  height: 297px;
+}
+
+/****************************** RIGHT INFORMATION ******************************/
+
+.bundle-right-information
+{
+  margin-left: 100px;
+}
+
+.bundle-title
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 29px;
+  display: flex;
+}
+
+.bundle-type
+{
+  width: 63px;
+  height: 29px;
+  background-color: #FF8417;
+  border-radius: 12%;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bundle-type span
+{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.bundle-description
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+
+.bundle-include-title
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 0.5em;
+}
+
+.bundle-include-list
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.bundle-price
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  display: flex;
+  margin-top: 1em;
+}
+
+.bundle-call-to-action
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  align-self: center;
+  margin-left: 2em;
+}
+
+.bundle-call-to-action span
+{
+  border: 1px black solid;
+  height: 1.8em;
+  width: 12em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2em;
+}

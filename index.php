@@ -34,6 +34,8 @@
                 )
             );
 
+
+
             // The Query
             $render_query = new WP_Query( $args1 );
             $animation_query = new WP_Query( $args2 );
@@ -55,7 +57,7 @@
                             </div>
                             <div class="right-information home-mode">
             
-                                <div class="render-title"><span><?php the_field('date'); ?> </span><a href="href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo the_title(); ?></a></div>
+                                <div class="render-title"><span><?php the_field('date'); ?> </span><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo the_title(); ?></a></div>
                                 <div class="render-software"><span>Software</span></div>
                                 <div class="render-software-list">
                                     <span>

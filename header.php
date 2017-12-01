@@ -21,7 +21,8 @@
     <body <?php body_class(); ?>>
         <header id="header">
 
-            <div class="header-menu">
+            <div class="container-logo"></div>
+
             <?php
             $args=array(
             'theme_location' => 'header', // nom du slug
@@ -32,6 +33,5 @@
             );
             wp_nav_menu($args);
             ?>
-            </div>
 
         </header>
