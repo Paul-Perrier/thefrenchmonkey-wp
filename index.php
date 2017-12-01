@@ -13,18 +13,31 @@
             );
             $args2 = array(
                 'post_type' => 'animate',
-                'posts_per_page' => 6,
+                'posts_per_page' => 8,
+                'tax_query' => array(
+                array(
+                    'taxonomy' => 'format',
+                    'field'    => 'slug',
+                    'terms'    => 'facebook'
+                ),
+                )
+                );
+            $args3 = array(
+                'post_type' => 'animate',
+                'posts_per_page' => 2,
                 'tax_query' => array(
                     array(
                         'taxonomy' => 'format',
                         'field'    => 'slug',
-                        'terms'    => 'facebook'
+                        'terms'    => 'vimeo'
                     ),
-                ));
+                )
+            );
 
             // The Query
             $render_query = new WP_Query( $args1 );
             $animation_query = new WP_Query( $args2 );
+            $vimeo_query = new WP_Query( $args3 );
 
             // The Loop
             if ( $render_query->have_posts() ) {
@@ -107,25 +120,53 @@
             ?>
 
                     <div class="animation-container">
-
-                    <?php
-                    // animation
-                    if ( $animation_query->have_posts() ) {
-                        while ( $animation_query->have_posts() ) {
-                            $animation_query->the_post();
-                            // TO DO : A trier selon animation carré ou pas
-                            ?>
-                            <?php $animation_url = get_field('link'); ?>
-                            <iframe src="<?php echo $animation_url ?>" width="380" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                        <div class="animation-list">
                             <?php
-                        }
-                        /* Restore original Post Data */
-                        wp_reset_postdata();
-                    } else {
-                        // no posts found
-                    }
-                    ?>
+                            // animation
+                            if ( $animation_query->have_posts() ) {
+                                while ( $animation_query->have_posts() ) {
+                                    $animation_query->the_post();
+                                    // TO DO : A trier selon animation carré ou pas
+                                    ?>
 
+                                    <div class="anim">
+                                        <?php $animation_url = get_field('link'); ?>
+                                        <iframe class="" src="<?php echo $animation_url ?>" width="280" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                                    </div>
+                                    <?php
+                                }
+                                /* Restore original Post Data */
+                                wp_reset_postdata();
+                            } else {
+                                // no posts found
+                            }
+                            ?>
+                        </div>
+                    </div>
+
+                    <div class="vimeo-container">
+                        <div class="vimeo-list">
+                            <?php
+                            // animation
+                            if ( $vimeo_query->have_posts() ) {
+                                while ( $vimeo_query->have_posts() ) {
+                                    $vimeo_query->the_post();
+                                    // TO DO : A trier selon animation carré ou pas
+                                    ?>
+
+                                    <div class="anim">
+                                        <?php $animation_url = get_field('link'); ?>
+                                        <iframe class="" src="<?php echo $animation_url ?>" width="580" height="327" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                                    </div>
+                                    <?php
+                                }
+                                /* Restore original Post Data */
+                                wp_reset_postdata();
+                            } else {
+                                // no posts found
+                            }
+                            ?>
+                        </div>
                     </div>
 
 

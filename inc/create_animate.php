@@ -39,7 +39,16 @@ function animate_function(){
 
         register_post_type($post_type, $args );
 
+        $taxonomy = "format";
+        $object_type = array("animate");
 
+        $args = array(
+            'label' => __( 'Format' ),
+            'rewrite' => array( 'slug' => 'format' ),
+            'hierarchical' => true,
+
+        );
+        register_taxonomy( $taxonomy, $object_type, $args );
 
 }
 

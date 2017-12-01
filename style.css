@@ -38,9 +38,9 @@ CONTAINERS STYLES
 */
 
 .container {
-  background-color: #000;
+  background-color: #FFF;
   width:100vw;
-  height: 2000px;
+  height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -193,6 +193,54 @@ HEADER STYLE SET
   flex-direction: row;
 }
 
+
+/*
+**
+ANIMATIONS SECTION
+**
+ */
+
+.animation-container {
+  background-color: rgb(12,11,11);
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-list {
+  width: 70%;
+  height: auto;
+  padding-top: 30px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.animation-list .anim {
+  margin-bottom: 20px;
+}
+
+.vimeo-container {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vimeo-list {
+  width: 70%;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.vimeo-list .anim {
+  margin-bottom: 20px;
+}
 
 /*
 **
