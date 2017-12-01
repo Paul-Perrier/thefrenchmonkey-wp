@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="reset.css">
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700,900" rel="stylesheet">
 
         <!--
             Tout le contenu de la partie head de mon site

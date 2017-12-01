@@ -1,50 +1,101 @@
 <?php get_header(); //appel du template header.php  ?>
 
-<div class="single_container">
 
-    <?php
-    // boucle WordPress
-    if (have_posts()){
-        while (have_posts()){
-            the_post();
-            ?>
-            <!-- Content Start -->
-
-            <div class="upper_section">
-
-                <?php $url = wp_get_attachment_url( get_field('image') ); ?>
-                <img class="single_img" src="<?php echo $url ?>" alt="">
-
-                <h2 class="single_name"><?php the_title(); ?></h2>
-
-            </div>
+    <div id="content" class="container">
 
 
-            <?php
 
-            $terms = get_the_terms(get_the_id(), 'software');
-            if ( $terms) {
-                foreach ( $terms as $term ) {
-                    echo '<li>' . $term->name . '</li>';
-                }
-            }
-
-            ?>
-
-
-            <?php
-        }
-    }
-    else {
-        ?>
-        Nous n'avons pas trouvé d'article répondant à votre recherche
         <?php
-    }
-    ?>
 
-    <!-- Get Taxonomic field -->
+        $args1 = array(
+            'post_type' => 'render',
+            'posts_per_page' => 1
+        );
+
+        // The Query
+        $the_query = new WP_Query( $args1 );
+
+        // The Loop
+        if ( $the_query->have_posts() ) {
+            while ( $the_query->have_posts() ) {
+                $the_query->the_post();
+                ?>
+
+                <div class="intro_container">
+
+                    <div class="showcase-render-container">
+                        <div class="render-picture">
+                            <?php $url = wp_get_attachment_url( get_field('image') ); ?>
+                            <div class="img"><img src="<?php echo $url ?>" alt=""></div>
+                            <h3>Daily Render</h3>
+                        </div>
+                        <div class="right-information home-mode">
+
+                            <div class="render-title"><span><?php the_field('date'); ?> </span><a href="href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo the_title(); ?></a></div>
+                            <div class="render-software"><span>Software</span></div>
+                            <div class="render-software-list">
+                                    <span>
+                                          <?php
+
+                                          $terms = get_the_terms(get_the_id(), 'software');
+                                          if ( $terms) {
+                                              foreach ( $terms as $term ) {
+                                                  echo '<li>' . $term->name . '</li>';
+                                              }
+                                          }
+
+                                          ?>
+                                    </span>
+                            </div>
+                            <div class="render-engine"><span>Renderer</span></div>
+                            <div class="render-engine-list">
+                                    <span>
+                                        <?php
+
+                                        $terms = get_the_terms(get_the_id(), 'renderer');
+                                        if ( $terms) {
+                                            foreach ( $terms as $term ) {
+                                                echo '<li>' . $term->name . '</li>';
+                                            }
+                                        }
+
+                                        ?>
+                                    </span>
+                            </div>
+                            <div class="render-dowload"><?php the_field('download'); ?><img src="assets/images/icons/arrow.svg" alt=""></div>
+                            <div class="render-files">Project Render File</div>
+                            <div class="render-files-list">
+                                    <span>
+                                        <?php
+
+                                        $terms = get_the_terms(get_the_id(), 'files');
+                                        if ( $terms) {
+                                            foreach ( $terms as $term ) {
+                                                echo '<li>' . $term->name . '</li>';
+                                            }
+                                        }
+
+                                        ?>
+                                    </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <?php
+            }
+            /* Restore original Post Data */
+            wp_reset_postdata();
+        } else {
+            // no posts found
+        }
+
+        ?>
 
 
-</div> <!-- /content -->
 
-<?php get_footer(); //appel du template footer.php ?>
+    </div> <!-- /content -->
+
+<?php get_footer();

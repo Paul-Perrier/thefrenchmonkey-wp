@@ -48,7 +48,7 @@ CONTAINERS STYLES
 }
 
 .intro_container {
-  background-color: #1A1A1A;
+  background-color: white;
   width:100%;
   height: 100vh;
   display: flex;
@@ -65,24 +65,104 @@ CONTAINERS STYLES
 .showcase-render-container .render-picture {
   width:40%;
   height:100%;
-  background-color: red;
+}
+
+.render-picture .img img {
+  width:100%;
+  height: auto;
+  box-shadow: -20px 24px 60px rgba(0, 0, 0, 0.18);
+
+}
+
+.render-picture h3 {
+  /* Daily Render */
+
+  position: absolute;
+  left: -10%;
+  top: 30%;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 111px;
+  font-size: 102px;
+
+  color: #000000;
+  opacity: 0.04;
+  transform: rotate(-90deg);
+
 }
 
 .showcase-render-container .right-information {
   width:60%;
-  height:100%;
-  background-color: blue;
+  height:80%;
+  display:flex;
+  justify-content: flex-start;
+  align-items: left;
+  flex-direction: column;
 }
 
-.card_container {
-  width: 70%;
-  height: 500px;
-  background-color: #111;
-  display: flex;
-  flex-flow: row wrap;
+.home-mode {
+  justify-content: center !important;
 }
 
 
+
+.right-information .render-title {
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 32px;
+  margin-left: 120px;
+  margin-bottom: 50px;
+  color: #000000;
+
+}
+
+.render-title a {
+
+  color: #000;
+}
+
+.right-information .render-software, .render-engine, .render-files {
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 24px;
+  margin-left: 120px;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.right-information .render-software-list, .render-engine-list, .render-files-list {
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+  margin-left: 120px;
+  margin-bottom: 40px;
+  color: #4F4F4F;
+}
+
+.right-information .render-dowload {
+
+  font-family: Roboto;
+  border: solid 1px #4F4F4F;
+  padding: 10px 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 18px;
+  margin-left: 120px;
+  margin-bottom: 40px;
+  color: #4F4F4F;
+}
 /*
 **
 HEADER STYLE SET

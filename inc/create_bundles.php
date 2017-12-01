@@ -39,7 +39,14 @@ function bundles_function(){
 
         register_post_type($post_type, $args );
 
-
+    $taxonomy="bundle-content";
+    $object_type = array("bundles");
+    $args = array(
+        'label' => __( 'Bundle Content' ),
+        'rewrite' => array( 'slug' => 'bundle-content' ),
+        'hierarchical' => true,
+    );
+    register_taxonomy( $taxonomy, $object_type, $args );
 
 }
 

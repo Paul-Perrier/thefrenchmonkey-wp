@@ -61,7 +61,7 @@ function render_function(){
         $object_type = array("render");
         $args = array(
             'label' => __( 'Files' ),
-            'rewrite' => array( 'slug' => 'Files' ),
+            'rewrite' => array( 'slug' => 'files' ),
             'hierarchical' => true,
         );
         register_taxonomy( $taxonomy, $object_type, $args );
