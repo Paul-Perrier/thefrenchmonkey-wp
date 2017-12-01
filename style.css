@@ -472,10 +472,20 @@ div.container-footer ul
 }
 
 div.container-footer li
+ {
+   list-style: none;
+   padding-right: 2vw;
+   color: white;
+ }
+
+div.container-footer li a
 {
-  list-style: none;
-  padding-right: 2vw;
-  color: white;
+  color : white;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
 }
 
 div.container-footer li img
